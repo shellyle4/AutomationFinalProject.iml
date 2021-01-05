@@ -43,14 +43,16 @@ This can be a base for design and implement tests scenario
 
 
 ## Screenshot and Videos
-Reports:
 
-<img src="images/AllureJenkins.GIF" width=200>  <img src="images/AllureJenkins1.png" width=200> <img src="images/AllureJenkinsFailed.png" width=200>
+**Reports:**
 
-Mobile:
+<img src="images/AllureJenkins.GIF" width=400>   <img src="images/AllureJenkins1.png" width=400>
+<img src="images/AllureJenkinsFailed.png" width=400>
 
-<img src="images/MobileTesting.png" width=200>  
+**Mobile:**
 
-Web Testing (Video):
+<img src="images/MobileTesting.png" width=400>  
+
+**Web Testing (*Video*):**
 
 [<img src="images/Screenshot.jpg" width=400>](https://drive.google.com/file/d/1yaxbA_5qEXHqxk_AxiAnzD5J6F1Ojj8n/view?usp=sharing)
