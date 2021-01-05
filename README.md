@@ -40,3 +40,17 @@ This project offer a central infrastructure for automation testing for different
 ## Tests Execution
 For each of the application there is a few functional TC that demonstrate flow and purpose.
 This can be a base for design and implement tests scenario
+
+
+## Screenshot and Videos
+Reports:
+
+<img src="images/AllureJenkins.GIF" width=200>  <img src="images/AllureJenkins1.png" width=200> <img src="images/AllureJenkinsFailed.png" width=200>
+
+Mobile:
+
+<img src="images/MobileTesting.png" width=200>  
+
+Web Testing (Video):
+
+[<img src="images/Screenshot.jpg" width=400>](https://drive.google.com/file/d/1yaxbA_5qEXHqxk_AxiAnzD5J6F1Ojj8n/view?usp=sharing)
