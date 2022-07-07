@@ -52,6 +52,9 @@ public class Base
     protected static ServerAdminMainPage grafanaServerAdminMain;
     protected static AddNewUserPage grafanaAddNewUser;
     protected static EditUserPage grafanaEditUser;
+    protected static AddDataSourcePage grafanaAddDataSource;
+    protected static ConfigurationMainPage grafanaConfigurationMain;
+    protected static ConfigurationMenuPage grafanaConfigurationMenu;
 
     //Page objects - Mobile
     protected static pageObjects.mortgage.MainPage mortgageMain;

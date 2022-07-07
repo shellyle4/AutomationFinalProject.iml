@@ -4,6 +4,7 @@ import extensions.DBActions;
 import extensions.UIActions;
 import extensions.Verfications;
 import io.qameta.allure.Step;
+import org.openqa.selenium.WebElement;
 import utilities.CommonOps;
 
 import java.util.List;
@@ -59,5 +60,29 @@ public class WebFlows extends CommonOps
             Verfications.nonExistanceOfElement(grafanaServerAdminMain.rows);
         else
             throw new RuntimeException("Invalid Expected Output option in Data Driven Testing, should be exists or not-exist");
+    }
+
+    @Step ("Business Flow: Add Data Source")
+    public static void addDataSource( String dataSourceName)
+    {
+        if (grafanaConfigurationMain.list_addMoreSource.size()==0){
+            UIActions.click(grafanaConfigurationMain.btn_addNewSource);
+        }
+        else
+            UIActions.click(grafanaConfigurationMain.list_addMoreSource.get(0));
+
+        UIActions.selectFromList(grafanaAddDataSource.list_sourceNames, dataSourceName);
+        UIActions.click(grafanaAddDataSource.btn_back);
+    }
+
+    @Step ("Business Flow: Delete All Data Source")
+    public static void deleteDataSource()
+    {
+        for (int i = grafanaConfigurationMain.list_dataSources.size()-1; i >= 0 ; i--)
+        {
+            UIActions.click(grafanaConfigurationMain.list_dataSources.get(i));
+            UIActions.click(grafanaAddDataSource.btn_deleteDataSource);
+            UIActions.click(grafanaAddDataSource.btn_confirmDelete);
+        }
     }
 }

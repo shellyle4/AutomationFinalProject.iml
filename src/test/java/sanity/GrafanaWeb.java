@@ -66,4 +66,25 @@ public class GrafanaWeb extends CommonOps
         UIActions.mouseHover(grafanaLeftMenu.btn_server,grafanaServerAdminMenu.link_users);
         WebFlows.searchAndVerifyUser(user, shouldExist);
     }
+
+    @Test (description = "Test 08 - Add New Data Source")
+    @Description("This test add data source")
+    public void test08_addDataSource()
+    {
+        UIActions.mouseHover(grafanaLeftMenu.btn_configuration,grafanaConfigurationMenu.link_dataSources);
+        int i = UIActions.getListSize( grafanaConfigurationMain.list_dataSources);//2
+        WebFlows.addDataSource("Loki");//1
+        Verfications.verifyNumber(UIActions.getListSize( grafanaConfigurationMain.list_dataSources),i+1);
+
+    }
+
+    @Test (description = "Test 09 - Remove Data Source from list")
+    @Description("This test remove data source")
+    public void test09_removeDataSource()
+    {
+        UIActions.mouseHover(grafanaLeftMenu.btn_configuration,grafanaConfigurationMenu.link_dataSources);
+        WebFlows.deleteDataSource();
+        Verfications.verfiyTextInElement(grafanaConfigurationMain.txt_noDataSource,"There are no data sources defined yet");
+
+    }
 }

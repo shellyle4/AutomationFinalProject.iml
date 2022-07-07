@@ -3,7 +3,7 @@
     <!-- Timeout -->
     <Timout>5</Timout>
 
-    <!-- Authorization -->
+    <!-- Authorization for Grafana-->
     <UserName>admin</UserName>
     <Password>admin</Password>
 

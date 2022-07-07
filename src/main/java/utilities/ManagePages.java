@@ -20,6 +20,9 @@ public class ManagePages extends Base
         grafanaServerAdminMain = PageFactory.initElements(driver, ServerAdminMainPage.class);
         grafanaAddNewUser = PageFactory.initElements(driver,AddNewUserPage.class);
         grafanaEditUser = PageFactory.initElements(driver,EditUserPage.class);
+        grafanaAddDataSource = PageFactory.initElements(driver,AddDataSourcePage.class);
+        grafanaConfigurationMain = PageFactory.initElements(driver,ConfigurationMainPage.class);
+        grafanaConfigurationMenu = PageFactory.initElements(driver, ConfigurationMenuPage.class);
     }
 
     public static void initmortgage()

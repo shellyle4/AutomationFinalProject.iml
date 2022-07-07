@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import utilities.CommonOps;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class UIActions extends CommonOps
@@ -24,6 +25,13 @@ public class UIActions extends CommonOps
     {
         wait.until(ExpectedConditions.visibilityOf(elem));
         elem.sendKeys(text);
+    }
+
+    @Step ("Return Text/String from Element")
+    public static String getText(WebElement elem)
+    {
+        wait.until(ExpectedConditions.visibilityOf(elem));
+        return elem.getText();
     }
 
     @Step ("Update Text Element as Human")
@@ -78,6 +86,28 @@ public class UIActions extends CommonOps
             elem.sendKeys(Keys.BACK_SPACE);
         }
     }
+
+    @Step ("Select option from list")
+    public static void selectFromList(List<WebElement> listOfOptions,String optionToSelect)
+    {
+        for (int i = 0; i< listOfOptions.size();i++)
+        {
+            if (listOfOptions.get(i).getText().equalsIgnoreCase(optionToSelect))
+            {
+                listOfOptions.get(i).click();
+                break;
+            }
+        }
+    }
+
+
+    @Step ("Get list size")
+    public static int getListSize(List<WebElement> listElements)
+    {
+        return listElements.size();
+    }
+
+
 
 
 }
